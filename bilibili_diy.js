@@ -209,7 +209,7 @@ if (magicJS.read(blackKey)) {
         }
         break;
         //2022-03-05 add by ddgksf2013
-        case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
+        case /^https?:/\/\api\.bilibili\.com\/x\/player\/v2\?/.test(magicJS.request.url):
         try {
           let obj = JSON.parse(magicJS.response.body);
           //magicJS.logInfo(`公众号墨鱼手记`);
